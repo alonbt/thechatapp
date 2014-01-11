@@ -10,9 +10,7 @@
     "angular-resource": "1.2.6",
     "angular-cookies": "1.2.6",
     "angular-sanitize": "1.2.6",
-    "angular-route": "1.2.6"
-  },
-  "devDependencies": {
+    "angular-route": "1.2.6",
     "angular-mocks": "1.2.6",
     "angular-scenario": "1.2.6",
     "angular-resource": "~1.2.8",
