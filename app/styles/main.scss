@@ -85,6 +85,15 @@ body {
     height: 150px;
 }
 
+.error {
+    color: red;
+    font-size: 18px;
+    clear: both;
+    text-align: left;
+    position: relative;
+    top: -18px;
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .container {

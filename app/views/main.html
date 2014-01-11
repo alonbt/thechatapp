@@ -10,13 +10,10 @@
 <div class="row marketing">
   <h4>Chat history</h4>
   <ul>
-    <li>
-      <span class="date"> 07/08/13 12:34 PM </span>
-      <span class="contnt"> This is first message </span>
-    </li>
-    <li>
-      <span class="date"> 07/08/13 12:34 PM </span>
-      <span class="contnt"> {{myMessage}} </span>
+    <li ng-repeat="message in messages.messages">
+      <span class="date"> {{message.sentat | moment:"l"}} </span>
+      <span class="username"> {{message.username}} </span>
+      <span class="contnt"> {{message.message}} </span>
     </li>
   </ul>
 </div>
@@ -25,7 +22,9 @@
   <p class="lead">
     <input ng-model="myMessage" class="my-message" placeholder="Type your stuff" type="text"/>
   </p>
-  <p><a id="send-msg" class="btn btn-lg btn-success" ng-click="sendMsg()">Send!</a></p>
+  <p><a id="send-msg" class="btn btn-lg btn-success" ng-click="sendMsg()">Send!</a>
+    <div class="error" ng-hide="dataSuccessful">We're sorry, but something went beserk, please try again :-/ </div>
+  </p>
 </div>
 
 <div class="footer">
